@@ -1,32 +1,24 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class MenuItem extends Component {
-  state = { isActive: false };
-
-  appendIsActiveClass() {
-    let isActive = !this.state.isActive;
-    this.setState({ isActive });
-  }
-
   renderClassDinamic() {
-    let classes = "nav-link";
-    return this.state.isActive ? classes + " active" : classes;
+    let classes = "nav-link ml-2";
+    return this.props.isActive ? classes + " active" : classes;
   }
 
   render() {
     return (
       <span
         className={this.renderClassDinamic()}
-        onClick={this.appendIsActiveClass.bind(this)}
+        onClick={this.props.onHandleClick}
         href="#"
+        style={{ width: "70px", height: "70px" }}
       >
         <FontAwesomeIcon
           icon={this.props.iconType}
-          style={{
-            width: "40%",
-            height: "50px"
-          }}
+          style={{ width: "30px", height: "50px" }}
         />
+        {this.props.buttonCaption}
       </span>
     );
   }

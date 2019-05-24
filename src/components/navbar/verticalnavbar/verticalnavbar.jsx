@@ -3,26 +3,75 @@ import MenuItem from "./menuitem";
 import "./NavBar.css";
 
 class VerticalNavBar extends Component {
+  state = {
+    buildingView: false,
+    gridView: false,
+    settingsView: false
+  };
+
+  handleBuilingViewClick() {
+    var buildingView = !this.state.buildingView;
+    this.setState({
+      buildingView: buildingView,
+      gridView: false,
+      settingsView: false
+    });
+  }
+
+  handleGridViewClick() {
+    let gridView = !this.state.gridView;
+    this.setState({
+      gridView: gridView,
+      buildingView: false,
+      settingsView: false
+    });
+  }
+
+  handleSettingsViewClick() {
+    let settingsView = !this.state.settingsView;
+
+    this.setState({
+      settingsView: settingsView,
+      buildingView: false,
+      gridView: false
+    });
+  }
+
   render() {
     return (
       <React.Fragment>
         <nav
-          className={
-            "navbar navbar-light bg-light mr-auto float-lg-left full-h "
-          }
+          className={"navbar navbar-light bg-light full-h "}
           style={{
             borderRight: "0.5px solid #9E9E9E",
             float: "left",
-            width: "132px",
-            paddingLeft: "32px"
+            width: "117px",
+            paddingLeft: "16px"
           }}
         >
           <ul className="nav nav-pills mb-auto">
-            <li className="nav-item">
-              <MenuItem iconType="layer-group" />
+            <li className="nav-item mt-2">
+              <MenuItem
+                isActive={this.state.buildingView}
+                iconType="layer-group"
+                onHandleClick={this.handleBuilingViewClick.bind(this)}
+              />
             </li>
-            <li className="nav-item">
-              <MenuItem iconType="th-large" />
+            <li className="nav-item mt-2">
+              <MenuItem
+                isActive={this.state.gridView}
+                iconType="th-large"
+                onHandleClick={this.handleGridViewClick.bind(this)}
+              />
+            </li>
+          </ul>
+          <ul className="nav nav-pills mt-auto">
+            <li className="nav item">
+              <MenuItem
+                iconType="cog"
+                isActive={this.state.settingsView}
+                onHandleClick={this.handleSettingsViewClick.bind(this)}
+              />
             </li>
           </ul>
         </nav>

@@ -1,15 +1,23 @@
 import React, { Component } from "react";
 
-import VerticalNavBar from "../verticalnavbar/verticalnavbar";
-import HorizontalNavBar from "../horizontalnavbar/horizontalnavbar";
+import VerticalNavBar from "./verticalnavbar/verticalnavbar";
+import HorizontalNavBar from "./horizontalnavbar/horizontalnavbar";
 
 class NavBar extends Component {
   getVerticalNavBar() {
-    return <VerticalNavBar />;
+    return (
+      <div className="col-1">
+        <VerticalNavBar />
+      </div>
+    );
   }
 
   getHorizontalNavBar() {
-    return <HorizontalNavBar />;
+    return (
+      <div>
+        <HorizontalNavBar />
+      </div>
+    );
   }
 
   render() {
@@ -17,7 +25,7 @@ class NavBar extends Component {
     let navBar;
     if (isHorizontal === true) navBar = this.getHorizontalNavBar();
     else navBar = this.getVerticalNavBar();
-    return <div>{navBar}</div>;
+    return navBar;
   }
 }
 

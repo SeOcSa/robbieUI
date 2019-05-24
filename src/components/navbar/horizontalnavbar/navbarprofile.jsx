@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import profilePic from "../../images/profilePic.svg";
+import profilePic from "../../../images/profilePic.svg";
 
 class NavBarProfile extends Component {
   render() {
