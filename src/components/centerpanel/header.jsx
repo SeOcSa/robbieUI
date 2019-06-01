@@ -6,22 +6,10 @@ class Header extends Component {
     return (
       <div className={"header-container"}>
         {" "}
-        <h1 className={"b"} style={{ marginBottom: "0px" }}>
-          Robots{" "}
-        </h1>
-        <button
-          className={"btn btn-primary btn-lg "}
-          style={{
-            height: "70%",
-            width: "70%",
-            marginLeft: "50px",
-            marginTop: "13px",
-            borderRadius: "5px",
-            fontSize: "12px"
-          }}
-        >
+        <h1 className={"b robo-header-title"}>Robots</h1>
+        <button className={"btn btn-primary btn-lg robo-add-btn"}>
           <span>
-            <FontAwesomeIcon icon="plus" style={{ marginRight: "5px" }} />
+            <FontAwesomeIcon icon="plus" className="robo-add-btn-icon" />
           </span>
           Add Robot
         </button>

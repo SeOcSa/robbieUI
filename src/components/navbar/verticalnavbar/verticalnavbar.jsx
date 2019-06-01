@@ -40,15 +40,7 @@ class VerticalNavBar extends Component {
   render() {
     return (
       <React.Fragment>
-        <nav
-          className={"navbar navbar-light bg-light full-h "}
-          style={{
-            borderRight: "0.5px solid #9E9E9E",
-            float: "left",
-            width: "117px",
-            paddingLeft: "16px"
-          }}
-        >
+        <nav className={"navbar navbar-light bg-light full-h vertical-navbar"}>
           <ul className="nav nav-pills mb-auto">
             <li className="nav-item mt-2">
               <MenuItem
@@ -65,7 +57,7 @@ class VerticalNavBar extends Component {
               />
             </li>
           </ul>
-          <ul className="nav nav-pills mt-auto">
+          <ul className="nav nav-pills mt-auto mb-4">
             <li className="nav item">
               <MenuItem
                 iconType="cog"

@@ -9,11 +9,9 @@ class HorizontalNavBar extends Component {
     return (
       <React.Fragment>
         <nav
-          className={"navbar navbar-expand-lg navbar-light bg-light"}
-          style={{
-            borderBottom: "0.5px solid #9E9E9E",
-            padding: "0"
-          }}
+          className={
+            "navbar navbar-expand-lg navbar-light bg-light horizontal-navbar"
+          }
         >
           <NavBarToggleButton />
           <NavBarBrand />

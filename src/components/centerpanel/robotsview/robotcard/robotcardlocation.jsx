@@ -4,18 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class RobotsCardLocation extends Component {
   render() {
     return (
-      <span
-        className="card-text pl-3"
-        style={{ color: "#636e72", fontSize: "12px" }}
-      >
+      <span className="card-text pl-3 robo-card-location">
         <FontAwesomeIcon
-          className="mr-1"
+          className="mr-1 robo-card-location-icon"
           icon="map-marker-alt"
-          style={{
-            width: "15px",
-            height: "15px",
-            color: "#636e72"
-          }}
         />
         {this.props.roboLocation}
       </span>

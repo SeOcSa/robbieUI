@@ -8,7 +8,7 @@ class RobotsView extends Component {
     return (
       <div className="col-sm-8">
         <div className="card">
-          <div className="card-body shadow" style={{ height: "65vh" }}>
+          <div className="card-body shadow robo-card-filter-container">
             <div className="row ml-1">
               <CardTitle titleText="FILTER BY" />
             </div>

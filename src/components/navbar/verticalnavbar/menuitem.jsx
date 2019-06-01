@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class MenuItem extends Component {
   renderClassDinamic() {
-    let classes = "nav-link ml-2";
+    let classes = "nav-link ml-2 menu-item";
     return this.props.isActive ? classes + " active" : classes;
   }
 
@@ -11,12 +11,10 @@ class MenuItem extends Component {
       <span
         className={this.renderClassDinamic()}
         onClick={this.props.onHandleClick}
-        href="#"
-        style={{ width: "70px", height: "70px" }}
       >
         <FontAwesomeIcon
+          className="menu-item-icon"
           icon={this.props.iconType}
-          style={{ width: "30px", height: "50px" }}
         />
         {this.props.buttonCaption}
       </span>

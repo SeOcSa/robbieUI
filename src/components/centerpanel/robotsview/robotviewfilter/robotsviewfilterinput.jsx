@@ -5,13 +5,9 @@ class FilterInput extends Component {
     return (
       <div className="col-sm-4">
         <input
-          className="form-control form-control-lg w-100 border rounded-lg"
+          className="form-control form-control-lg w-100 border rounded-lg robo-card-filter-input"
           type="text"
           placeholder={this.props.placeHolder}
-          style={{
-            fontSize: "14px",
-            fontWeight: "bold"
-          }}
         />
       </div>
     );

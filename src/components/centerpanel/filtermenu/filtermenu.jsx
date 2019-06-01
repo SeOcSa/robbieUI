@@ -5,9 +5,9 @@ import CardTitle from "../cardtitle";
 class ListMenu extends Component {
   render() {
     return (
-      <div className="col-sm-4" style={{ maxWidth: "40%" }}>
+      <div className="col-sm-4 filter-menu-container">
         <div className="card">
-          <div className="card-body shadow" style={{ height: "65vh" }}>
+          <div className="card-body shadow filter-menu-card">
             <div className="row ml-1">
               <CardTitle titleText="CHOOSE ROBOT TYPE" />
             </div>

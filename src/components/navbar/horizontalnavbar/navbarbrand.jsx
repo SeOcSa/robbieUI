@@ -8,9 +8,8 @@ class NavBarBrand extends Component {
         <a className="navbar-brand mr-0">
           <img
             src={logo}
-            className="d-inline-block align-left"
+            className="d-inline-block align-left brand-logo-size"
             alt="logo"
-            style={{ width: "100px" }}
           />
         </a>
       </div>

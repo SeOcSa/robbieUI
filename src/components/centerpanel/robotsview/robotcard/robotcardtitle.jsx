@@ -7,15 +7,11 @@ class RobotCardTitle extends Component {
       <div className="card-title">
         <div className="row">
           <div className="col text-left pt-1">
-            <span class="online-dot mr-2  border" />
+            <span className="online-dot mr-2  border" />
             <small>On</small>
           </div>
           <div className="col text-right pr-1 pt-1" id="navBarProfile">
-            <img
-              src={vismaIcon}
-              style={{ width: "36%", height: "100%" }}
-              alt="vismaIcon"
-            />
+            <img className="robo-card-icon" src={vismaIcon} alt="vismaIcon" />
           </div>
         </div>
       </div>
