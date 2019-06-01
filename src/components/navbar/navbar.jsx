@@ -6,7 +6,7 @@ import HorizontalNavBar from "./horizontalnavbar/horizontalnavbar";
 class NavBar extends Component {
   getVerticalNavBar() {
     return (
-      <div className="col-1">
+      <div className="col-1" style={{ maxWidth: "5.4%", paddingRight: "0px" }}>
         <VerticalNavBar />
       </div>
     );

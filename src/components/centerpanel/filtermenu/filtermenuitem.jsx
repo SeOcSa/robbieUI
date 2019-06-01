@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class ListMenuItem extends Component {
   render() {
     return (
-      <div className="row mt-3 ml-1 mr-1">
+      <div className="row mt-4 ml-1 mr-1 border rounded-lg">
         <button
           type="button"
-          class="btn btn-light"
+          className="btn btn-light"
           style={{ backgroundColor: "#ffffff", height: "60px" }}
         >
           <span

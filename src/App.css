@@ -32,20 +32,17 @@
   }
 }
 
-.title-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.button-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .header-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+}
+
+.online-dot {
+  height: 10px;
+  width: 10px;
+  background-color: #2ecc71;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 3px;
 }
