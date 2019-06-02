@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
 import NavBar from "./components/navbar/navbar";
-import Header from "./components/centerpanel/header";
-import FilterMenu from "./components/centerpanel/filtermenu/filtermenu";
-import RobotsView from "./components/centerpanel/robotsview/robotsview";
+import Header from "./components/centralpanel/header";
+import FilterMenu from "./components/centralpanel/filtermenu/filtermenu";
+import RobotsView from "./components/centralpanel/robotsview/robotsview";
 import "bootstrap/dist/css/bootstrap.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -36,35 +36,13 @@ function App() {
   return (
     <div className="App">
       <NavBar isHorizontal={true} />
-      <div
-        className="row bg-light"
-        id="container"
-        style={{ position: "relative" }}
-      >
+      <div className="row bg-light app-container" id="container">
         <NavBar isHorizontal={false} />
-        <div
-          className="col-8"
-          style={{
-            marginLeft: "50px",
-            marginTop: "30px"
-          }}
-        >
-          <div
-            className="row"
-            style={{
-              marginLeft: "50px",
-              marginTop: "30px"
-            }}
-          >
+        <div className="col-8 central-panel-container ">
+          <div className="row central-panel-header-container">
             <Header />
           </div>
-          <div
-            className="row"
-            style={{
-              marginLeft: "20px",
-              marginTop: "30px"
-            }}
-          >
+          <div className="row central-panel-robo-container ">
             <FilterMenu />
             <RobotsView />
           </div>
