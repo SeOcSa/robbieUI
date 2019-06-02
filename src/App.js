@@ -16,8 +16,11 @@ import {
   faTape,
   faEye,
   faTools,
-  faMapMarkerAlt
+  faMapMarkerAlt,
+  faArrowDown,
+  faArrowUp
 } from "@fortawesome/free-solid-svg-icons";
+import RoboDetails from "./components/centralpanel/robodetails/robodetails";
 
 library.add(
   faLayerGroup,
@@ -29,7 +32,9 @@ library.add(
   faTape,
   faEye,
   faTools,
-  faMapMarkerAlt
+  faMapMarkerAlt,
+  faArrowDown,
+  faArrowUp
 );
 
 function App() {
@@ -38,7 +43,7 @@ function App() {
       <NavBar isHorizontal={true} />
       <div className="row bg-light app-container" id="container">
         <NavBar isHorizontal={false} />
-        <div className="col-8 central-panel-container ">
+        <div className="col-xs-12 col-md-8 central-panel-container ">
           <div className="row central-panel-header-container">
             <Header />
           </div>
@@ -46,6 +51,9 @@ function App() {
             <FilterMenu />
             <RobotsView />
           </div>
+        </div>
+        <div className="col-xs-6 col-md-4 robo-details-container">
+          <RoboDetails />
         </div>
       </div>
     </div>

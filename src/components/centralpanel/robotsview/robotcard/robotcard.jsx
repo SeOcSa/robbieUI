@@ -8,7 +8,6 @@ class RobotCard extends Component {
 
   renderClassDinamic() {
     let classes = "card mb-4 shadow-sm robo-card";
-    console.log(this.state);
     return this.state.isActive ? classes + " robo-card-active" : classes;
   }
 
