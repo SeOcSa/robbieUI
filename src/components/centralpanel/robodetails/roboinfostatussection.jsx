@@ -1,13 +1,20 @@
 import React, { Component } from "react";
 
 class RoboInfoStatusSection extends Component {
+  renderStatusClass() {
+    let classes = "mr-2 border";
+
+    return this.props.status === "Online"
+      ? classes + " online-dot"
+      : classes + " offline-dot";
+  }
   render() {
     return (
       <div className="col-sm-6 robo-status-info">
         <h6 className="robo-info-section-title mt-2">Status</h6>
         <div className="row">
           <div className="col">
-            <span className="online-dot mr-2 border" />
+            <span className={this.renderStatusClass()} />
             <small className="robo-card-status">{this.props.status}</small>
           </div>
         </div>

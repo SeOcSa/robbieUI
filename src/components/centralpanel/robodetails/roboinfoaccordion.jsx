@@ -7,7 +7,7 @@ class RoboInfoAccordion extends Component {
       {
         title: "Location",
         paragraphTitle: "Building",
-        paragraph: "Strada Aristide Demetriade 1, Timișoara 300088"
+        paragraph: this.props.robbie.roboAddress
       },
       {
         title: "Control"

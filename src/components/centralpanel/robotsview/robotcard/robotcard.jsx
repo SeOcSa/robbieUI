@@ -4,7 +4,7 @@ import RobotCardName from "./robotcardname";
 import RobotCardLocation from "./robotcardlocation";
 
 class RobotCard extends Component {
-  state = { isActive: false };
+  state = { isActive: this.props.robbie.isSelected };
 
   renderClassDinamic() {
     let classes = "card mb-4 shadow-sm robo-card";
@@ -15,6 +15,8 @@ class RobotCard extends Component {
     let { isActive } = this.state;
 
     this.setState({ isActive: !isActive });
+
+    this.props.onSelectRobbie(this.props.robbie);
   }
 
   render() {
@@ -25,9 +27,9 @@ class RobotCard extends Component {
           className={this.renderClassDinamic()}
         >
           <div className="card-body pt-0 pl-2">
-            <RobotCardTitle />
-            <RobotCardName roboName={this.props.roboName} />
-            <RobotCardLocation roboLocation={this.props.roboLocation} />
+            <RobotCardTitle roboStatus={this.props.robbie.status} />
+            <RobotCardName roboName={this.props.robbie.roboName} />
+            <RobotCardLocation roboLocation={this.props.robbie.roboLocation} />
           </div>
         </div>
       </div>

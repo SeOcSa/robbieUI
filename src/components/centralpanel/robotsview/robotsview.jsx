@@ -17,8 +17,13 @@ class RobotsView extends Component {
               <CardTitle titleText="DEVICES" />
             </div>
             <div className="row">
-              <RobotCard roboName="Robbie 5" roboLocation="Visma Timisoara" />
-              <RobotCard roboName="Robbie 6" roboLocation="Visma Sibiu" />
+              {this.props.robbies.map((robo, key) => (
+                <RobotCard
+                  robbie={robo}
+                  key={key}
+                  onSelectRobbie={this.props.onSelectRobbie}
+                />
+              ))}
             </div>
           </div>
         </div>

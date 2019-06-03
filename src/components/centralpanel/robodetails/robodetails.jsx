@@ -6,8 +6,11 @@ class RoboDetails extends Component {
   render() {
     return (
       <div>
-        <RoboDetailsHeader roboName="Robbie 5" roboHealth="25" />
-        <RoboInfo />
+        <RoboDetailsHeader
+          roboName={this.props.robbie.robotName}
+          roboHealth={this.props.robbie.health}
+        />
+        <RoboInfo robbie={this.props.robbie} />
       </div>
     );
   }

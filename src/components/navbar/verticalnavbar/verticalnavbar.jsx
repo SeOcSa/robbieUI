@@ -39,7 +39,7 @@ class VerticalNavBar extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div className="col-auto vertical-nav-bar">
         <nav className={"navbar navbar-light bg-light full-h vertical-navbar"}>
           <ul className="nav nav-pills mb-auto">
             <li className="nav-item mt-2">
@@ -67,7 +67,7 @@ class VerticalNavBar extends Component {
             </li>
           </ul>
         </nav>
-      </React.Fragment>
+      </div>
     );
   }
 }

@@ -10,19 +10,24 @@ class RoboInfo extends Component {
   render() {
     return (
       <div className="row mt-4 ml-4">
-        <RoboInfoStatusSection status="Online" />
-        <RoboInfoTypeSection roboType="Warehouse" vismaLogo={vismalogo} />
+        <RoboInfoStatusSection
+          status={this.props.robbie.status === "On" ? "Online" : "Offline"}
+        />
+        <RoboInfoTypeSection
+          roboType={this.props.robbie.roboType}
+          vismaLogo={vismalogo}
+        />
         <RoboInfoVersionSection
           versionType="Hardware version"
-          version="62.9"
+          version={this.props.robbie.hardwareVersion}
           isOnRightSide={false}
         />
         <RoboInfoVersionSection
           versionType="Software version"
-          version="5.4"
+          version={this.props.robbie.softwareVersion}
           isOnRightSide={true}
         />
-        <RoboInfoAccordion />
+        <RoboInfoAccordion robbie={this.props.robbie} />
       </div>
     );
   }

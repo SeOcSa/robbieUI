@@ -47,6 +47,15 @@
   padding: 3px;
 }
 
+.offline-dot {
+  height: 10px;
+  width: 10px;
+  background-color: #f6b93b;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 3px;
+}
+
 .robo-card {
   width: 100% !important;
   border-radius: 10px !important;
@@ -122,6 +131,14 @@
 .robo-card-icon {
   width: 36% !important;
   height: 100% !important;
+}
+
+.robo-card-icon-off {
+  width: 36% !important;
+  height: 100% !important;
+  opacity: 0.6;
+  filter: alpha(opacity=40); /* msie */
+  background-color: #000;
 }
 
 .robo-card-filter-input {
